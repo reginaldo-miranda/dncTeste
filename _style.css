@@ -1,0 +1,59 @@
+/* Reseta as margens e o padding padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização básica do body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Centraliza o conteúdo do main */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilização do cabeçalho */
+#cabecalho {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilização do banner-article */
+.banner-article {
+    /* background-image: url(./assets/imagem1.jpg);*/
+    display: flex; /* Flexbox para posicionar os itens lado a lado */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px; /* Limita a largura da imagem */
+    margin-right: 20px
+    
+}
+
+/* Estilização para a imagem */
+#imagem-banner {
+    max-width: 300px; /* Limita a largura da imagem */
+    margin-right: 20px; /* Espaço entre a imagem e o texto */
+    flex-shrink: 0; /* Impede que a imagem encolha */
+}
+
+/* Estilização da lista */
+.post-popular {
+    flex: 1; /* Faz a lista ocupar o espaço restante */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estilização dos itens da lista */
+.post-popular ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+}
+
+.post-popular ul li {
+    margin-bottom: 10px;
+    font-weight: bold; /* Deixa o texto da lista em negrito */
+}

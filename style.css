@@ -1,0 +1,88 @@
+html{
+    font-family: "Manrope", sans-serif;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+
+}
+ main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+body{
+   
+    margin: 0;
+    height: 600px;
+}
+#cabecalho{
+    background-color: #02A28F;
+    color: white;
+    padding-left: 5rem; 
+    height: 2.8rem;
+   
+     
+}
+#cabecalho > h1{
+    padding: .62rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin: 0;
+ }
+
+  
+ .banner{
+
+   display: flex; /* Flexbox para posicionar os itens lado a lado */
+   justify-content: space-between; 
+   
+    
+}
+
+#esquerdaBanner-texto{
+   
+   /* flex-basis: 85%; */
+   width: 900px;
+   height: 550px;
+   /* color: white; */
+   margin-top: 35px;
+   margin-left: 70px;
+   border-radius: 10px;
+   
+}
+#fundo{
+   background-image: url(./assets/imagem1.jpg); 
+}
+/*
+#esquerdaBanner-texto {
+  padding-bottom: 0;
+  margin-top: 450px;
+  margin-left: 30px;
+
+}
+/*
+#esquerdaBanner-texto > p {
+   margin-left: 30px;
+   color: crimson;
+
+}*/
+ #direitoPost-popular{
+  
+   color: aqua;
+   text-align: justify; 
+   /* flex-basis: 30%; */
+ }
+
+ #direitoPost-popular > p{ 
+    background-color: #02A28F;
+    margin-top: 200px;
+ }
+
+ #footer-pg{
+   background-color: #02A28F;
+   color: white;
+   height: 2.3rem;
+} 
+
