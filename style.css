@@ -132,7 +132,7 @@ h4{
    color: white;
    height: 2.3rem;
 }
-#baseTexto{
+.baseTexto{
  
    background: #02A28F;
    border-radius: 6px;
@@ -143,7 +143,7 @@ h4{
    color: white;
   
 }
-#textoPost{   
+.textoPost{   
 margin-left: 30px;
 margin-top: 35px;
 color: white;
@@ -151,8 +151,8 @@ padding-top: 5px;
 
 }
 .post-mais{
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
+ /*  display: grid;
+   grid-template-columns: repeat(2, 1fr); */
    background: #02A28F;
    color: white;
    margin-left: 70px;
@@ -190,6 +190,22 @@ padding-top: 5px;
    font-size: 15px;
 }
 
+.categorias-container {
+   display: flex;
+ /*  justify-content: center;  */
+   align-items: center;
+   background-color: #02A28F;
+   border-radius: 8px;
+   /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)*/;
+    width: 360px;
+    height: 30px;
+    color: white;
+    margin-right: 25px;
+}
+    
+.categorias-container-texto{
+   margin-left: 20px;
+}
 .categorias-lista {
    list-style-type: none;
    padding: 0;
@@ -201,6 +217,7 @@ padding-top: 5px;
    padding: 2px 10px;
    color: #333;
    font-size: 0.9em;
+   margin-right: 30px;
 }
 
 .categoria-item {
@@ -217,10 +234,6 @@ padding-top: 5px;
    font-size: 10px;
 }
 
-.desenvovimento{
-  
-   justify-content:left ;
-}
 
 /*
 <div class="post-mais-categoria">
@@ -234,7 +247,7 @@ padding-top: 5px;
                             align-items: center;
                             height: 100vh;
                         }
-                      
+                         
                         .categorias-container {
                            display: flex;
                            justify-content: center;
@@ -249,7 +262,7 @@ padding-top: 5px;
                         h5 {
                             text-align: center;
                             color: #333;
-                        }
+                        } 
                         
                         .categorias-lista {
                             list-style-type: none;
@@ -280,7 +293,6 @@ padding-top: 5px;
                             color: #333;
                             font-size: 0.9em;
                         }
-
 */
 
 
