@@ -40,7 +40,12 @@ body{
    justify-content: space-between; 
        
 }
-
+.container-grid{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 5rem;
+       
+}
 #esquerdaBanner-texto{
   background-image: url(./assets/imagem1.jpg); 
    /* flex-basis: 85%; */
@@ -106,9 +111,6 @@ h4{
    display: flex;
    flex-direction: row;
 }
-.post-mais-detalhes-teste{
-
-}
 
 #primeiraImg img {
      
@@ -158,7 +160,7 @@ padding-top: 5px;
    margin-left: 70px;
    width: 800px; 
    border-radius: 6px;
-   height: 30px;
+   height: 130px;
    
 }
 .post-mais-texto{
@@ -170,7 +172,13 @@ padding-top: 5px;
 .post-mais-texto > p{
    font-size: 10px;
 }
-
+.container-image{
+   background: white;
+   height: 130px;  
+}
+.container-image > span{
+   color: black;
+}
 .post-mais-categoria{
   
    display: flex;
