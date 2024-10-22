@@ -1,0 +1,306 @@
+html{
+   
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+
+}
+ main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+body{
+   
+    margin: 0;
+    height: 600px;
+}
+#cabecalho{
+    background-color: #02A28F;
+    color: white;
+    padding-left: 5rem; 
+    height: 2.8rem;
+   
+     
+}
+#cabecalho > h1{
+    padding: .62rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0;
+ }
+
+  
+ .container{
+
+   display: flex; /* Flexbox para posicionar os itens lado a lado */
+   justify-content: space-between; 
+       
+}
+.container-grid{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 5rem;
+       
+}
+#esquerdaBanner-texto{
+  background-image: url(./assets/imagem1.jpg); 
+   /* flex-basis: 85%; */
+   width: 900px;
+   height: 550px;
+   /* color: white; */
+   margin-top: 35px;
+   margin-left: 70px;
+   border-radius: 10px;
+   
+}
+
+
+#textos{
+ margin-top: 450px;
+ margin-left: 30px;
+ color: white; 
+}
+#textos >p{
+   margin: 0;
+ 
+}
+#textos > h2{
+   margin: 3px 0 5px;
+}
+
+   
+ #direitoPost-popular > p{ 
+    background-color: #02A28F;
+    margin-top: 35px;
+    margin-left: 15px;
+    color: white;
+    font-size: 19px;
+    width: 80%;
+    border-radius: 5px;
+     
+ }
+ #direitoPost-popular {
+   
+   width: 35%; /* Ajuste conforme necessário */
+   height: 600px;
+
+ } 
+  
+h4{
+   margin: 0;
+   font-size: 14px;
+}
+
+.postData{
+ font-size: 12px;
+ margin: 5px;
+}
+
+.post-container {
+    display: flex;
+    align-items: center; /* Alinha verticalmente no centro */
+    gap: 10px; /* Espaço entre a imagem e o texto */
+    margin-bottom: 80px;
+    margin-left: 15px;
+}
+.post-mais-detalhes{
+   display: flex;
+   flex-direction: row;
+}
+
+#primeiraImg img {
+     
+   display: block;
+   max-width: 100%;
+   height: auto;
+   border-radius: 5px;
+}
+.imagem{
+   width: 140px;
+   height: 50px;
+}
+
+.post-content {
+    display: flex;
+    flex-direction: column;
+}
+
+#footer-pg{
+   background-color: #02A28F;
+   color: white;
+   height: 2.3rem;
+}
+.baseTexto{
+ 
+   background: #02A28F;
+   border-radius: 6px;
+   height: 30px;
+   width: 90%;
+   margin-left: 15px;
+   margin-bottom: 75px;
+   color: white;
+  
+}
+.textoPost{   
+margin-left: 30px;
+margin-top: 35px;
+color: white;
+padding-top: 5px;
+
+}
+.post-mais{
+ /*  display: grid;
+   grid-template-columns: repeat(2, 1fr); */
+   background: #02A28F;
+   color: white;
+   margin-left: 70px;
+   width: 800px; 
+   border-radius: 6px;
+   height: 130px;
+   
+}
+.post-mais-texto{
+   display: flex;
+   justify-content: space-between; /* Alinha o h4 à direita e o p à esquerda */
+   align-items: center; 
+   margin: 0 20px 0 20px;
+}
+.post-mais-texto > p{
+   font-size: 10px;
+}
+.container-image{
+   background: white;
+   height: 130px;  
+}
+.container-image > span{
+   color: black;
+}
+.post-mais-categoria{
+  
+   display: flex;
+   justify-content: space-between; /* Alinha o h4 à direita e o p à esquerda */
+   align-items: center;
+   background: #02A28F;
+   height: 30px;
+   margin-right: 30px;
+   width: 350px;
+   border-radius: 6px;
+
+ 
+} 
+.post-mais-categoria > h5{
+   color: white;
+   margin-left: 30px;
+   font-size: 15px;
+}
+
+.categorias-container {
+   display: flex;
+ /*  justify-content: center;  */
+   align-items: center;
+   background-color: #02A28F;
+   border-radius: 8px;
+   /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)*/;
+    width: 360px;
+    height: 30px;
+    color: white;
+    margin-right: 25px;
+}
+    
+.categorias-container-texto{
+   margin-left: 20px;
+}
+.categorias-lista {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+}
+.quantidade {
+   background-color: #e0e0e0;
+   border-radius: 12px;
+   padding: 2px 10px;
+   color: #333;
+   font-size: 0.9em;
+   margin-right: 30px;
+}
+
+.categoria-item {
+   display: flex;
+   justify-content: space-between;
+   padding: 10px 0 5px 0;
+   border-bottom: 1px solid #ccc;
+}
+
+  
+.nome-categoria {
+   font-weight: bold;
+   color: #555;
+   font-size: 10px;
+}
+
+
+/*
+<div class="post-mais-categoria">
+                        body {
+                            font-family: Arial, sans-serif;
+                            background-color: #f4f4f9;
+                            margin: 0;
+                            padding: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100vh;
+                        }
+                         
+                        .categorias-container {
+                           display: flex;
+                           justify-content: center;
+                           align-items: center;
+                            background-color: #ffffff;
+                            border-radius: 8px;
+                            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                            padding: 20px;
+                            width: 300px;
+                        }
+                        
+                        h5 {
+                            text-align: center;
+                            color: #333;
+                        } 
+                        
+                        .categorias-lista {
+                            list-style-type: none;
+                            padding: 0;
+                            margin: 0;
+                        }
+                        
+                        .categoria-item {
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 10px 0;
+                            border-bottom: 1px solid #ccc;
+                        }
+                        
+                        .categoria-item:last-child {
+                            border-bottom: none;
+                        }
+                        
+                        .nome-categoria {
+                            font-weight: bold;
+                            color: #555;
+                        }
+                        
+                        .quantidade {
+                            background-color: #e0e0e0;
+                            border-radius: 12px;
+                            padding: 2px 10px;
+                            color: #333;
+                            font-size: 0.9em;
+                        }
+*/
+
+
