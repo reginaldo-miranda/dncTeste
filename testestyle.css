@@ -16,7 +16,7 @@ html{
 body{
    
     margin: 0;
-    height: 600px;
+  /*  height: 600px; */
 }
 #cabecalho{
     background-color: #02A28F;
@@ -40,100 +40,50 @@ body{
    justify-content: space-between; 
        
 }
-.container-grid{
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   gap: 5rem;
-       
-}
-#esquerdaBanner-texto{
-  background-image: url(./assets/imagem1.jpg); 
-   /* flex-basis: 85%; */
-   width: 900px;
-   height: 550px;
-   /* color: white; */
-   margin-top: 35px;
-   margin-left: 70px;
-   border-radius: 10px;
-   
-}
-
-
-#textos{
- margin-top: 450px;
- margin-left: 30px;
- color: white; 
-}
-#textos >p{
-   margin: 0;
- 
-}
-#textos > h2{
-   margin: 3px 0 5px;
-}
-
-   
- #direitoPost-popular > p{ 
-    background-color: #02A28F;
+/* ----------------- foto inicial superior a esquerda --------------> */
+.esquerdaBanner-texto{
+   background-image: url(./assets/imagem1.jpg); 
+    /* flex-basis: 85%; */
+    width: 900px;
+    height: 550px;
+    /* color: white; */
     margin-top: 35px;
-    margin-left: 15px;
-    color: white;
-    font-size: 19px;
-    width: 80%;
-    border-radius: 5px;
-     
+    margin-left: 70px;
+    border-radius: 10px;
+    
  }
- #direitoPost-popular {
+
+ #textos{
+   margin-top: 450px;
+   margin-left: 30px;
+   color: white; 
+  }
+  #textos >p{
+     margin: 0;
    
-   width: 35%; /* Ajuste conforme necessário */
-   height: 600px;
+  }
+  #textos > h2{
+     margin: 3px 0 5px;
+  }
 
- } 
-  
-h4{
-   margin: 0;
-   font-size: 14px;
-}
-
-.postData{
- font-size: 12px;
- margin: 5px;
-}
-
-.post-container {
-    display: flex;
-    align-items: center; /* Alinha verticalmente no centro */
-    gap: 10px; /* Espaço entre a imagem e o texto */
-    margin-bottom: 80px;
-    margin-left: 15px;
-}
-.post-mais-detalhes{
-   display: flex;
-   flex-direction: row;
-}
-
-#primeiraImg img {
-     
-   display: block;
-   max-width: 100%;
-   height: auto;
-   border-radius: 5px;
-}
-.imagem{
-   width: 140px;
-   height: 50px;
-}
-
-.post-content {
-    display: flex;
-    flex-direction: column;
-}
-
-#footer-pg{
+  /* ---------------------- inicial superior a direita ------------ */ 
+  #direitoPost-popular > p{ 
    background-color: #02A28F;
+   margin-top: 35px;
+   margin-left: 15px;
    color: white;
-   height: 2.3rem;
+   font-size: 19px;
+   width: 80%;
+   border-radius: 5px;
+    
 }
+#direitoPost-popular {
+  
+  width: 35%; /* Ajuste conforme necessário */
+  height: 600px;
+
+} 
+
 .baseTexto{
  
    background: #02A28F;
@@ -152,7 +102,68 @@ color: white;
 padding-top: 5px;
 
 }
-.post-mais{
+
+
+.post-container {
+   display: flex;
+   align-items: center; /* Alinha verticalmente no centro */
+   gap: 10px; /* Espaço entre a imagem e o texto */
+   margin-bottom: 80px;
+   margin-left: 15px;
+}
+
+primeiraimg
+
+#primeiraImg img {
+     
+   display: block;
+   max-width: 100%;
+   height: auto;
+   border-radius: 5px;
+}
+.imagem{
+   width: 140px;
+   height: 50px;
+}
+
+.post-content {
+   display: flex;
+   flex-direction: column;
+}
+
+.postData{
+   font-size: 12px;
+   margin: 5px;
+  }
+  
+
+
+
+
+  
+h4{
+   margin: 0;
+   font-size: 14px;
+}
+
+
+.post-mais-detalhes{
+   display: flex;
+   flex-direction: row;
+}
+
+/*---------------------------- fim da sessao 1 ------------------- */
+
+
+.container-grid{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 5rem;
+    
+       
+}
+
+.container-post-mais{
  /*  display: grid;
    grid-template-columns: repeat(2, 1fr); */
    background: #02A28F;
@@ -160,16 +171,16 @@ padding-top: 5px;
    margin-left: 70px;
    width: 800px; 
    border-radius: 6px;
-   height: 130px;
+   /* height: 130px; */
    
 }
-.post-mais-texto{
+.container-post-mais-texto{
    display: flex;
    justify-content: space-between; /* Alinha o h4 à direita e o p à esquerda */
    align-items: center; 
    margin: 0 20px 0 20px;
 }
-.post-mais-texto > p{
+.container-post-mais-texto > p{
    font-size: 10px;
 }
 .container-image{
@@ -197,6 +208,8 @@ padding-top: 5px;
    margin-left: 30px;
    font-size: 15px;
 }
+
+
 
 .categorias-container {
    display: flex;
@@ -240,6 +253,12 @@ padding-top: 5px;
    font-weight: bold;
    color: #555;
    font-size: 10px;
+}
+
+#footer-pg{
+   background-color: #02A28F;
+   color: white;
+   height: 2.3rem;
 }
 
 
