@@ -228,7 +228,7 @@ h4{
 
 .titulo{
    background-color:turquoise;
-   width: 840px;
+   width: 800px;
    height: 50px;
    border-radius: 5px;
    margin-left: 40px;
@@ -246,6 +246,8 @@ h4{
    grid-template-rows: repeat(3,1fr);
    margin: 0;
    margin-left: 70px;
+   width: 745px;
+   height: 816px;
  
 }
 
@@ -258,13 +260,15 @@ h4{
    margin-top: 10px;
    text-align: left;
    width: 400px;
-   height: 380px;
+   height: 400px;
 
 }
 .imagem-area{
    text-align: left;
-   border-radius: 5px;
-   width: 205px;
+   border-radius: 8px;
+   width: 360px;
+   height: 192px;
+   
 }
 h2{
    margin: 0;
@@ -406,7 +410,7 @@ opem
    color: #555;
    font-size: 10px;
 }
-*/
+
 
 #footer-pg{
    background-color: #02A28F;
