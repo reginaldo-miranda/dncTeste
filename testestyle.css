@@ -4,7 +4,7 @@ html{
   /*  width: 100%;
     height: 100%;  */
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 1rem;
 
 }
 
@@ -39,18 +39,18 @@ body{
 .esquerdaBanner-texto{
    background-image: url(./assets/imagem1.jpg); 
     /* flex-basis: 85%; */
-    width: 900px;
-    height: 550px;
+    width: 56.25rem;
+    height: 31.25rem;
     /* color: white; */
-    margin-top: 35px;
-    margin-left: 70px;
-    border-radius: 10px;
+    margin-top: 2.18rem;
+    margin-left: 4.37rem;
+    border-radius: 0.62rem;
     
  }
 
  #textos{
-   margin-top: 450px;
-   margin-left: 30px;
+   margin-top: 28.12rem;
+   margin-left: 1.87rem;
    color: white; 
   }
   #textos >p{
@@ -58,43 +58,43 @@ body{
    
   }
   #textos > h2{
-     margin: 3px 0 5px;
+     margin: 0.18rem 0 0.31rem;
   }
 
   /* ---------------------- inicial superior a direita ------------ */ 
   #direitoPost-popular > p{ 
    background-color: #02A28F;
-   margin-top: 35px;
-   margin-left: 15px;
+   margin-top: 2.18rem;
+   margin-left: 0.93rem;
    color: white;
-   font-size: 19px;
+   font-size: 1.18rem;
    width: 80%;
-   border-radius: 5px;
+   border-radius: 0.31rem;
     
 }
 #direitoPost-popular {
   
   width: 35%; /* Ajuste conforme necessário */
-  height: 600px;
+  height: 37.5rem;
 
 } 
 
 .baseTexto{
  
    background: #02A28F;
-   border-radius: 6px;
-   height: 30px;
+   border-radius: 0.37rem;
+   height: 1.87rem;
    width: 90%;
-   margin-left: 15px;
-   margin-bottom: 75px;
+   margin-left: 0.93rem;
+   margin-bottom: 4.68rem;
    color: white;
   
 }
 .textoPost{   
-margin-left: 30px;
-margin-top: 35px;
+margin-left: 1.87rem;
+margin-top: 2.18rem;
 color: white;
-padding-top: 5px;
+padding-top: 0.31rem;
 
 }
 
