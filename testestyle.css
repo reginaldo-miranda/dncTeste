@@ -40,7 +40,7 @@ body{
    background-image: url(./assets/imagem1.jpg); 
     /* flex-basis: 85%; */
     width: 56.25rem;
-    height: 31.25rem;
+    height: 34.37rem;
     /* color: white; */
     margin-top: 2.18rem;
     margin-left: 4.37rem;
@@ -103,8 +103,8 @@ padding-top: 0.31rem;
    display: flex;
    align-items: center; /* Alinha verticalmente no centro */
    gap: 10px; /* Espaço entre a imagem e o texto */
-   margin-bottom: 80px;
-   margin-left: 15px;
+   margin-bottom: 5rem;
+   margin-left: 0.93rem;
 }
 
 
@@ -113,11 +113,11 @@ padding-top: 0.31rem;
    display: block;
    max-width: 100%;
    height: auto;
-   border-radius: 5px;
+   border-radius: 0.31rem;
 }
 .imagem{
-   width: 140px;
-   height: 50px;
+   width: 8.75rem;
+   height: 3.12rem;
 }
 
 .post-content {
@@ -126,13 +126,13 @@ padding-top: 0.31rem;
 }
 
 .postData{
-   font-size: 12px;
-   margin: 5px;
+   font-size: 0.75;
+   margin: 0.31rem;
   }
   
 h4{
    margin: 0;
-   font-size: 14px;
+   font-size: 0.87rem;
 }
 
 .post-mais-detalhes{
@@ -143,11 +143,11 @@ h4{
 
 .quantidade {
    background-color: #e0e0e0;
-   border-radius: 12px;
+   border-radius: 0.75rem;
   /* padding: 2px 10px; */
    color: #333;
    font-size: 0.9em;
-   margin-right: 1px;
+   margin-right: 0.06rem;
 }
 
 .container-area{
@@ -160,8 +160,8 @@ h4{
    display: flex;
    justify-content: space-between;
    align-items: center;
-   margin-left: 30px;
-   width: 950px;
+   margin-left: 1.87rem;
+   width: 59.37rem;
 }
 
 .cabeca-grid{
@@ -169,16 +169,16 @@ h4{
    grid-template-columns: repeat(2, 1fr);
    
    align-items: center;
-   margin-left: 30px;
-   width: 820px;
+   margin-left: 1.87rem;
+   width: 51.25rem;
 }
 /*------------------------------------------------*/
 .titulo{
    background-color:turquoise;
-   width: 800px;
-   height: 50px;
-   border-radius: 5px;
-   margin-left: 40px;
+   width: 50rem;
+   height: 3.12rem;
+   border-radius: 0.31re;
+   margin-left: 2.5rem;
 }
 .contact-title{
    margin: 0;
@@ -186,7 +186,7 @@ h4{
    display: flex;
    justify-content: space-between;
    align-items: center;
-   margin-left: 20px;
+   margin-left: 1.25rem;
    color: white;
    
 }
@@ -194,7 +194,7 @@ h4{
 .contact-title > p{
    display: flex;
    text-align:  center;
-   margin-right: 30px;
+   margin-right: 1.87rem;
 }
 /*----------------------------------------------------*/
 
@@ -202,15 +202,15 @@ h4{
    display: flex;
    align-items: center; 
    background-color:turquoise;
-   width: 353px;
-   height: 45px;
-   border-radius: 5px;
-   margin-left: 15px;
+   width: 22.06rem;
+   height: 2.81rem;
+   border-radius: 0.31rem;
+   margin-left: 0.93rem;
 
 }
  .contact-title-categoria > h2{
    
-   margin-left: 20px;
+   margin-left: 1.25rem;
    color: white;
 }
 
@@ -219,45 +219,45 @@ h4{
    grid-template-columns: repeat(3, 1fr);
    grid-template-rows: repeat(3,1fr);
    margin: 0;
-   margin-left: 45px;
+   margin-left: 2.81rem;
    width: 100%;
-   height: 1050px;
+   height: 65.62rem;
  
 }
 
 .grid-texto > p, h4{
-   margin: 4px;
-   margin-bottom: 10px;
+   margin: 0.25rem;
+   margin-bottom: 0.62rem;
    text-align: left;
 }
 .grid-imagem{
 
-   margin-top: 10px;
-   margin-left: 20px;
+   margin-top: 0.62rem;
+   margin-left: 1.25rem;
    text-align: left;
-   width: 400px;
-   height: 500px;
-   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-   margin-bottom: 15px;
+   width: 25rem;
+   height: 31.25rem;
+   box-shadow: 0.12rem 0.31rem 0.31rem rgba(0, 0, 0, 0.1);
+   margin-bottom: 0.93rem;
 }
 .grid-imagem-lista{
-   margin-top: 10px;
-   margin-left: 5px;
+   margin-top: 10px0.62rem;
+   margin-left: 0.31rem;
    text-align: left;
-   width: 340px;
-   height: 200px;
+   width: 21.25rem;
+   height: 12.5rem;
 
 }
 #grid-texto-pequeno{
  color: turquoise;
- font-size: 14px;
+ font-size: 0.87rem;
 }  
 
 .imagem-area{
    text-align: left;
-   border-radius: 8px;
-   width: 385px;
-   height: 230px;
+   border-radius: 0.5rem;
+   width: 24.06rem;
+   height: 14.37rem;
     
 } 
 
@@ -298,15 +298,15 @@ h2{
 .categoria-item {
    display: flex;
    justify-content: space-between;
-   padding: 10px 0 5px 0;
-   border-bottom: 1px solid #ccc;
+   padding: 0.62rem 0 0.31rem 0;
+   border-bottom: 0.06rem solid #ccc;
 }
 
   
 .nome-categoria {
    font-weight: bold;
    color: #555;
-   font-size: 10px;
+   font-size: 0.62rem;
    
 }
 
@@ -318,207 +318,7 @@ h2{
    background-color: #02A28F;
    color: white;
    height: 2.3rem;
-   margin-top: 110px;
-   font-size: 10px;
+   margin-top: 6.5rem;
+   font-size: 0.62rem;
 }
 
-
-/*
-<div class="post-mais-categoria">
-                        body {
-                            font-family: Arial, sans-serif;
-                            background-color: #f4f4f9;
-                            margin: 0;
-                            padding: 0;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            height: 100vh;
-                        }
-                         
-                        .categorias-container {
-                           display: flex;
-                           justify-content: center;
-                           align-items: center;
-                            background-color: #ffffff;
-                            border-radius: 8px;
-                            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-                            padding: 20px;
-                            width: 300px;
-                        }
-                        
-                        h5 {
-                            text-align: center;
-                            color: #333;
-                        } 
-                        
-                        .categorias-lista {
-                            list-style-type: none;
-                            padding: 0;
-                            margin: 0;
-                        }
-                        
-                        .categoria-item {
-                            display: flex;
-                            justify-content: space-between;
-                            padding: 10px 0;
-                            border-bottom: 1px solid #ccc;
-                        }
-                        
-                        .categoria-item:last-child {
-                            border-bottom: none;
-                        }
-                        
-                        .nome-categoria {
-                            font-weight: bold;
-                            color: #555;
-                        }
-                        
-                        .quantidade {
-                            background-color: #e0e0e0;
-                            border-radius: 12px;
-                            padding: 2px 10px;
-                            color: #333;
-                            font-size: 0.9em;
-                        }
-*/
-
-/*---------------------------- fim da sessao 1 ------------------- */
-/*
-.grid-titulos{
- display: grid;
- grid-template-columns: repeat(2, 2fr);
- align-items: center;
- 
- background: #02A28F;
-}
-.grid-container {
-   display: grid;
-   grid-template-columns:repeat(3, 1fr); /* Uma coluna para centralizar o conteúdo 
-   align-items: center; /* Centraliza verticalmente 
-   
-   gap: 20px; /* Espaçamento entre os itens 
- }
- .grid-container-itens{
-   width: 100%;
- }
- 
- .grid-container-itens .posts-header {
-   
-   display: flex;
-   justify-content: space-between; /* Mantém o título e a seção de ações na mesma linha 
-   align-items: center;
-   margin-left: 70px;
- }
- 
- .actions {
-   display: flex;
-   gap: 20px; /* Espaçamento entre "Ver todos" e "Categorias" 
- }
- 
- .ver-todos, .categorias {
-  /* cursor: pointer;
-   color: #007BFF; /* Cor para o link de "Ver todos" e "Categorias"
-   text-decoration: underline; 
-   text-align: right;
- }
- 
-*/
- /*
-.quantidade {
-   background-color: #e0e0e0;
-   border-radius: 12px;
-   padding: 2px 10px;
-   color: #333;
-   font-size: 0.9em;
-   margin-right: 30px;
-}
-*/
-/*
-opem
-
-
-.grid-container {
-   display: grid;
-   grid-template-columns:repeat(2, 1fr); /* Uma coluna para centralizar o conteúdo 
-   align-items: center; /* Centraliza verticalmente 
-   gap: 20px; /* Espaçamento entre os itens 
- }
- 
- .grid-container-itens .posts-header {
-   display: flex;
-   justify-content: space-between; /* Mantém o título e a seção de ações na mesma linha 
-   align-items: center;
- }
- 
- .actions {
-   display: flex;
-   gap: 20px; /* Espaçamento entre "Ver todos" e "Categorias" 
- }
- 
- .ver-todos, .categorias {
-  /* cursor: pointer;
-   color: #007BFF; /* Cor para o link de "Ver todos" e "Categorias" 
-   text-decoration: underline;
- }
-
-
-
-
-
-
-
-
-.container-post-mais-texto{
-   display: flex;
-   justify-content: space-between;  Alinha o h4 à direita e o p à esquerda 
-   align-items: center; 
-   margin: 0 20px 0 20px;
-}
-.container-post-mais-texto > p{
-   font-size: 10px;
-}
-.container-image{
-   background: white;
-   height: 130px;  
-}
-.container-image > span{
-   color: black;
-}
-.post-mais-categoria{
-  
-   display: flex;
-   justify-content: space-between; /* Alinha o h4 à direita e o p à esquerda 
-   align-items: center;
-   background: #02A28F;
-   height: 30px;
-   margin-right: 30px;
-   width: 350px;
-   border-radius: 6px;
-
- 
-} 
-.post-mais-categoria > h5{
-   color: white;
-   margin-left: 30px;
-   font-size: 15px;
-}
-
-
-
-.categorias-container {
-   display: flex;
- /*  justify-content: center; 
-   align-items: center;
-   background-color: #02A28F;
-   border-radius: 8px;
-   /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 360px;
-    height: 30px;
-    color: white;
-    margin-right: 25px;
-}
-    
-.categorias-container-texto{
-   margin-left: 20px;
-} */
