@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="testestyle.css">  
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,13 +11,15 @@
     <title>The Dev News</title>
 </head>
 <body>
-    
+        <!--  cabecalho-->
         <header id="cabecalho">
             <h1>The Dev News</h1>
         </header>
-        <section class="container">
+     
+        <!---------------------------------- sessao 1 --------------------->
+        <section class="container"> 
             
-             <div id="esquerdaBanner-texto"> 
+             <div class="esquerdaBanner-texto"> 
                 <div id="textos">
                     <p>opniao</p> 
                     <h2>Como ser um desenvolvedor</h2>
@@ -59,51 +61,112 @@
                     </div>
                 </div>
              </div>
-                    
+                        
         </section>
-        <section class="container-grid"> 
-            <div class="post-mais">
-                <div class="post-mais-texto"> <!-- -texto"> -->
-                    <h4>Posts mais recentes</h4>
-                    <p>Ver todos</p>
+        <!----- sessao 2 ------------------------------------>
+        <section class="container-area">
+            <div class="cabeca-grid">
+                <div class="titulo">
+                    <div class="contact-title">
+                        <h2>Posts mais recentes</h2>
+                        <p>Ver todos</p>
+                    </div>
                 </div>
-                <div class="container-image">
-                    <span>imagens </span>
-                 </div>
-             </div>
-             
+                <div class="titulo-categoria">
+                    <div class="contact-title-categoria" >
+                       <h2>categorias</h2>
+                    </div>
+                </div>
             </div>
-                <section>  
-                     <div class="categorias-container">
-                            <div>
-                                <h5 class="categorias-container-texto">Categorias</h5>
-                            </div>
-                    </div>     
-                    
-                </div>
-                    <ul class="categorias-lista">
-                        <li class="categoria-item">
-                            <span class="nome-categoria">>Saúde</span>
-                            <span class="quantidade">(1)</span>
-                        </li>
-                        <li class="categoria-item">
-                            <span class="nome-categoria">>Desenvolvimento</span>
-                            <span class="quantidade">(2)</span>
-                        </li>
-                        <li class="categoria-item">
-                            <span class="nome-categoria">>Produtividade</span>
-                            <span class="quantidade">(2)</span>
-                        </li>
-                        <li class="categoria-item">
-                            <span class="nome-categoria">>Opinião</span>
-                            <span class="quantidade">(1)</span>
-                        </li>
-                    </ul>
-                </section>
-            </section>   
-            <footer id="footer-pg">
-                <p>© 2024</p>
-            </footer> 
+        </section>    
+            <div class="grid-div-area">
+                <div class="grid-imagem fig1">
+                    <img  class="imagem-area" src="./assets/desenvolvimento.jpg" >
+                    <div class="grid-texto">
+                        <p id="grid-texto-pequeno">desenvolvimento</p>
+                        <h4>Desenvolvimento mobile</h4>
+                        <p><strong>By</strong> Fabio Tetsuo</p>
+                        <div> 
+                            <p>Lorem ipsum dolor sit amet consectetur. In <br>
+                                vitae urna commodo amet congue integer dapibus.<br> 
+                                Interdum semper mauris convallis fusce enim odio.<br>
+                                 Vitae montes ridiculus felis.</p>
+                            <p>22 Agosto 2022</p>
+                        </div>
+                        
+                    </div>
+               </div>
+               <div class="grid-imagem fig2">
+                    <img class="imagem-area" src="./assets/balancear.jpg">
+                    <div class="grid-texto">
+                        <p id="grid-texto-pequeno">saude</p>
+                        <h4>Balancear vida profissional e pessoal</h4>
+                        <p><strong>By</strong> Fabio Tetsuo</p>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet consectetur. In <br>
+                                vitae urna commodo amet congue integer dapibus.<br>
+                                Interdum semper mauris convallis fusce enim odio.<br>
+                                Vitae montes ridiculus felis.</p>
+                             <p>22 Agosto 2022</p>
+                        </div>
+                        
+                    </div>
+                </div>    
+
+                <div class="grid-imagem-lista fig3">
+                       <ul class="categorias-lista">
+                         <li class="categoria-item">
+                             <span class="nome-categoria">>Saúde</span>
+                             <span class="quantidade">(1)</span>
+                         </li>
+                         <li class="categoria-item">
+                             <span class="nome-categoria">>Desenvolvimento</span>
+                             <span class="quantidade">(2)</span>
+                         </li>
+                         <li class="categoria-item">
+                             <span class="nome-categoria">>Produtividade</span>
+                             <span class="quantidade">(2)</span>
+                         </li>
+                         <li class="categoria-item">
+                             <span class="nome-categoria">>Opinião</span>
+                             <span class="quantidade">(1)</span>
+                         </li>
+                     </ul>
+                 </div>
+                <div class="grid-imagem fig4">
+                        <img class="imagem-area" src="./assets/configurando.jpg">
+                        <div class="grid-texto">
+                            <p id="grid-texto-pequeno">desenvolvimento</p>
+                            <h4>Configurando VSCode</h4>
+                            <p><strong>By</strong> Fabio Tetsuo</p>
+                            <p>Lorem ipsum dolor sit amet consectetur. In <br>
+                               vitae urna commodo amet congue integer dapibus.<br>
+                               Interdum semper mauris convallis fusce enim odio.<br>
+                               Vitae montes ridiculus felis.</p>
+                            <p>22 Agosto 2022</p>
+                        </div>
+                 </div>
+    
+                 <div class="grid-imagem fig5">
+                        <img class="imagem-area" src="./assets/monitores.jpg">
+                        <div class="grid-texto">
+                            <p id="grid-texto-pequeno" >produtividade</p>
+                            <h4>2 monitores ou 1 ultrawide?</h4>
+                            <p><strong>By</strong> Fabio Tetsuo</p>
+                            <p>Lorem ipsum dolor sit amet consectetur. In <br>
+                               vitae urna commodo amet congue integer dapibus.<br>
+                               Interdum semper mauris convallis fusce enim odio.<br>
+                               Vitae montes ridiculus felis.</p>
+                            <p>22 Agosto 2022</p>
+                        </div>
+                  </div>
+               
+            </div>
+        </section>
+      
+        <footer id="footer-pg">
+             <p>Copyright@The Dev News</p>
+        </footer> 
     
     </body>
    

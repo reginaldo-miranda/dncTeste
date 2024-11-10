@@ -322,3 +322,31 @@ h2{
    font-size: 0.62rem;
 }
 
+/* --------------------tablet ---------------*/
+@media only screen and (min-width:768) and (max-width:1023){ 
+
+   
+}
+
+/*------------------------celular -------------------*/
+@media only screen and(max-width:767) {
+   /*
+   .esquerdaBanner-texto{
+      background-image: url(./assets/imagem1.jpg); 
+       /* flex-basis: 85%;
+       width: 28.12rem;
+       height: 17.18rem;
+       /* color: white; 
+       margin-top: 1.9rem;
+       margin-left: 2.15rem;
+       border-radius: 0.62rem;
+       
+    } */
+    .cabeca-grid{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      margin-left: 0.93rem;
+      width: 25.62rem;
+   }
+}
