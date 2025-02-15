@@ -1,324 +1,184 @@
-html{
-   
-   font-family: "Montserrat", sans-serif;
- /*  width: 100%;
-   height: 100%;  */
-   box-sizing: border-box;
-   font-size: 1rem;
-
+html {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: sans-serif;
 }
 
-body{
-  
-   margin: 0;
- /*  height: 600px; */
-}
-#cabecalho{
-   background-color: #02A28F;
-   color: white;
-   padding-left: 5rem; 
-   height: 2.8rem;
-  
-    
-}
-#cabecalho > h1{
-   padding: .62rem;
-   font-weight: 600;
-   font-size: 1.5rem;
-   margin: 0;
+body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#41e5d9, #4d8fe2);
+   /* margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
 }
 
- 
-.container{
-
-  display: flex; /* Flexbox para posicionar os itens lado a lado */
-  justify-content: space-between; 
-      
-}
-/* ----------------- foto inicial superior a esquerda --------------> */
-.esquerdaBanner-texto{
-  background-image: url(./assets/imagem1.jpg); 
-   /* flex-basis: 85%; */
-   width: 56.25rem;
-   height: 34.37rem;
-   /* color: white; */
-   margin-top: 2.18rem;
-   margin-left: 4.37rem;
-   border-radius: 0.62rem;
-   
+h1 {
+    font-size: 3.2rem;
+    margin: 0 0 1.6rem;
 }
 
-#textos{
-  margin-top: 28.12rem;
-  margin-left: 1.87rem;
-  color: white; 
- }
- #textos >p{
-    margin: 0;
-  
- }
- #textos > h2{
-    margin: 0.18rem 0 0.31rem;
- }
-
- /* ---------------------- inicial superior a direita ------------ */ 
- #direitoPost-popular > p{ 
-  background-color: #02A28F;
-  margin-top: 2.18rem;
-  margin-left: 0.93rem;
-  color: white;
-  font-size: 1.18rem;
-  width: 80%;
-  border-radius: 0.31rem;
-   
-}
-#direitoPost-popular {
- 
- width: 35%; /* Ajuste conforme necessário */
- height: 37.5rem;
-
-} 
-
-.baseTexto{
-
-  background: #02A28F;
-  border-radius: 0.37rem;
-  height: 1.87rem;
-  width: 90%;
-  margin-left: 0.93rem;
-  margin-bottom: 4.68rem;
-  color: white;
- 
-}
-.textoPost{   
-margin-left: 1.87rem;
-margin-top: 2.18rem;
-color: white;
-padding-top: 0.31rem;
-
+main {
+    width: 100%;
+    max-width: 40rem; 
+    background: #fff;
+    border-radius: .8rem;
+    padding: 3.2rem 2.4rem;
 }
 
-
-.post-container {
-  display: flex;
-  align-items: center; /* Alinha verticalmente no centro */
-  gap: 10px; /* Espaço entre a imagem e o texto */
-  margin-bottom: 5rem;
-  margin-left: 0.93rem;
+.todo-list-section {
+    margin: 0.8rem 0 1.6rem;
+    min-height: 5rem;
 }
 
-
-#primeiraImg img {
-    
-  display: block;
-  max-width: 100%;
-  height: auto;
-  border-radius: 0.31rem;
-}
-.imagem{
-  width: 8.75rem;
-  height: 3.12rem;
+.todo-list-section > ul {
+    padding-inline-start: 0rem;
+    height: 23rem;
+    overflow: auto;
 }
 
-.post-content {
-  display: flex;
-  flex-direction: column;
+.todo-list-section > ul > li {
+    padding: 0.8rem 1.6rem;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: .8rem;
+    border: 2px solid #d4bebe;
+    border-radius: .8rem;
 }
 
-.postData{
-  font-size: 0.75;
-  margin: 0.31rem;
- }
- 
-h4{
-  margin: 0;
-  font-size: 0.87rem;
+.todo-list-section > ul > li:last-child {
+    margin-bottom: 0;
 }
 
-.post-mais-detalhes{
-  display: flex;
-  flex-direction: row;
+.todo-list-section > ul > li > button {
+    width: 6.4rem;
+    height: 2.4rem;
+    background-color: #0d58e3;
+    color: #fff;
+    border: none;
+    border-radius: .4rem;
+    cursor: pointer;
 }
 
-
-.quantidade {
-  background-color: #e0e0e0;
-  border-radius: 0.75rem;
- /* padding: 2px 10px; */
-  color: #333;
-  font-size: 0.9em;
-  margin-right: 0.06rem;
+.checkbox-label-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.container-area{
- /* width: 920px;
- height: auto; */
-
+.checkbox-label-container > label {
+    cursor: pointer;
 }
 
-.cabeca{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 1.87rem;
-  width: 59.37rem;
+.checkbox-label-container > input {
+    margin-right: 0.8rem;
+    cursor: pointer;
 }
 
-.cabeca-grid{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  
-  align-items: center;
-  margin-left: 1.87rem;
-  width: 51.25rem;
-}
-/*------------------------------------------------*/
-.titulo{
-  background-color:turquoise;
-  width: 50rem;
-  height: 3.12rem;
-  border-radius: 0.31re;
-  margin-left: 2.5rem;
-}
-.contact-title{
-  margin: 0;
-/*   margin-top: .5rem; */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 1.25rem;
-  color: white;
-  
+#create-todo-form {
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
-.contact-title > p{
-  display: flex;
-  text-align:  center;
-  margin-right: 1.87rem;
-}
-/*----------------------------------------------------*/
-
-.titulo-categoria{
-  display: flex;
-  align-items: center; 
-  background-color:turquoise;
-  width: 22.06rem;
-  height: 2.81rem;
-  border-radius: 0.31rem;
-  margin-left: 0.93rem;
-
-}
-.contact-title-categoria > h2{
-  
-  margin-left: 1.25rem;
-  color: white;
+.input-description {
+    height: 2rem;
+    width: 100%;
+    font-size: 1.6rem;
+    border-radius: .4rem;
+    margin-right: .4rem;
+    outline: 0;
+    border: 1px solid #646464;
+    padding: .8rem;
 }
 
-.grid-div-area{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3,1fr);
-  margin: 0;
-  margin-left: 2.81rem;
-  width: 100%;
-  height: 65.62rem;
-
+.add-task-btn {
+    box-sizing: border-box;
+    height: 3.9rem;
+    width: 3.6rem;
+    color: #fff;
+    background: #8f49e7;
+    border: none;
+    border-radius: .4rem;
+    font-size: 2.4rem;
+    cursor: pointer;
 }
 
-.grid-texto > p, h4{
-  margin: 0.25rem;
-  margin-bottom: 0.62rem;
-  text-align: left;
-}
-.grid-imagem{
-
-  margin-top: 0.62rem;
-  margin-left: 1.25rem;
-  text-align: left;
-  width: 25rem;
-  height: 31.25rem;
-  box-shadow: 0.12rem 0.31rem 0.31rem rgba(0, 0, 0, 0.1);
-  margin-bottom: 0.93rem;
-}
-.grid-imagem-lista{
-  margin-top: 10px0.62rem;
-  margin-left: 0.31rem;
-  text-align: left;
-  width: 21.25rem;
-  height: 12.5rem;
-
-}
-#grid-texto-pequeno{
-color: turquoise;
-font-size: 0.87rem;
-}  
-
-.imagem-area{
-  text-align: left;
-  border-radius: 0.5rem;
-  width: 24.06rem;
-  height: 14.37rem;
-   
-} 
-
-h2{
-  margin: 0;
+.add-task-btn:disabled {
+    background-color: #d9d9d9;
+    cursor: not-allowed;
 }
 
-.fig1{
-  grid-area: 1 / 1;
-
- 
-}
-.fig2{
-  grid-area: 1/ 2;
-}
-.fig3{
-  grid-area: 1 / 3;
-  /*  margin-left: 50px; */
+.remove-done-tasks-btn {
+    box-sizing: border-box;
+    height: 3.6rem;
+    color: #fff;
+    background: #8f49e7;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: 0 1.6rem;
 }
 
-.fig4{
-  grid-area: 2 / 1;
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    align-items: center;
 }
 
-.fig5{
-  grid-area: 2 / 2;
-}
+@media screen and (max-width: 680px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        background-color: #da5c3e;
+    }
+
+    #create-todo-form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;      
+    }   
+
+    .add-task-btn {
+        width: 100%;
+        color: #fff;
+        background: #8f49e7;
+        border: none;
+        border-radius: .4rem;
+        font-size: 2.4rem;
+        cursor: pointer;
+    }
+
+    .input-description {
+        margin-bottom: .8rem;
+    }
+
+    .todo-list-section > ul > li {
+        display: flex;
+        flex-direction: column;
+    }
 
 
 
 
-.categorias-lista {
-  list-style-type: none;
-  padding: 0;
-  
-}
-
-.categoria-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.62rem 0 0.31rem 0;
-  border-bottom: 0.06rem solid #ccc;
-}
-
- 
-.nome-categoria {
-  font-weight: bold;
-  color: #555;
-  font-size: 0.62rem;
-  
-}
-
-
-#footer-pg{
-  display: flex;
-  justify-content: center;
-
-  background-color: #02A28F;
-  color: white;
-  height: 2.3rem;
-  margin-top: 6.5rem;
-  font-size: 0.62rem;
+    .todo-list-section > ul > li > button {
+        width: 6.4rem;
+        height: 2.4rem;
+        background-color: #e30d6a;
+        color: #fff;
+        border: none;
+        border-radius: .4rem;
+        cursor: pointer;
+    }
 }
 
