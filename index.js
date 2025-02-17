@@ -55,25 +55,24 @@ const removeDoneTasks = () => {
 
 }
 const createTaskListItem = (task, checkbox) => {
-
     const list = document.getElementById('todo-list');
-
-  
     const toDo = document.createElement('li');
-  
+
+    const editTaskButton = document.createElement("button");
+    editTaskButton.textContent = 'Editar';
+    editTaskButton.className = 'edit-task-btn';
+    editTaskButton.ariaLabel = 'Editar tarefa';
+    editTaskButton.onclick = () => handleEditTask(task.id);
 
     const removeTaskButton = document.createElement("button");
-
-    
-   // removeTaskButton.textContent = 'x';
-   removeTaskButton.textContent = 'Concluir'; 
-   removeTaskButton.ariaLabel = 'Remover tarefa';
-   
+    removeTaskButton.textContent = 'Concluir'; 
+    removeTaskButton.className = 'remove-task-btn';
+    removeTaskButton.ariaLabel = 'Remover tarefa';
     removeTaskButton.onclick = () => removeTask(task.id);
-
 
     toDo.id = task.id;
     toDo.appendChild(checkbox);
+    toDo.appendChild(editTaskButton);
     toDo.appendChild(removeTaskButton);
    
     list.appendChild(toDo);
@@ -81,18 +80,69 @@ const createTaskListItem = (task, checkbox) => {
     return toDo;
 }
 
+const handleEditTask = (taskId) => {
+    const taskElement = document.getElementById(taskId);
+    const label = taskElement.querySelector('label');
+    const currentText = label.textContent.replace(/ \(\d{2}\/\d{2}\/\d{4}, \d{2}:\d{2}:\d{2}\)$/, '');
+
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.className = 'editable-task';
+    input.value = currentText;
+
+    input.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            saveTaskEdit(taskId, input.value);
+        }
+    });
+
+    input.addEventListener('blur', () => {
+        saveTaskEdit(taskId, input.value);
+    });
+
+    label.replaceWith(input);
+    input.focus();
+}
+
+const saveTaskEdit = (taskId, newDescription) => {
+    const tasks = getTasksFromLocalStorage();
+    const updatedTasks = tasks.map(task => {
+        if (parseInt(task.id) === parseInt(taskId)) {
+            return { ...task, description: newDescription };
+        }
+        return task;
+    });
+
+    setTasksInLocalStorage(updatedTasks);
+    renderTasksProgressData(updatedTasks);
+
+    const taskElement = document.getElementById(taskId);
+    const input = taskElement.querySelector('input.editable-task');
+    const label = document.createElement('label');
+    label.textContent = newDescription + ` (${new Date().toLocaleString('pt-BR')})`;
+    label.htmlFor = `${taskId}-checkbox`;
+    input.replaceWith(label);
+}
+
 const onCheckboxClick = (event) => {
   const [id] = event.target.id.split('-');
   const tasks = getTasksFromLocalStorage();
+  const label = event.target.nextElementSibling;
 
   const updatedTasks = tasks.map((task) => {
-    
     return parseInt(task.id) === parseInt(id)
         ? { ...task, checked: event.target.checked}
-    : task
-    })
-    setTasksInLocalStorage(updatedTasks)
-    renderTasksProgressData(updatedTasks)
+        : task
+    });
+
+  if (event.target.checked) {
+    label.classList.add('text-taxado');
+  } else {
+    label.classList.remove('text-taxado');
+  }
+
+  setTasksInLocalStorage(updatedTasks);
+  renderTasksProgressData(updatedTasks);
 }
 
 const getCheckboxImput = ({id, description, checked, createdAt}) => {
@@ -178,10 +228,15 @@ window.onload = function() {
 
     tasks.forEach((task) => {
         const checkbox = getCheckboxImput(task);
-       
         createTaskListItem(task, checkbox);
-    
         
+        // Aplicar estilo taxado para tarefas já marcadas
+        if (task.checked) {
+            const checkboxElement = document.getElementById(`${task.id}-checkbox`);
+            if (checkboxElement) {
+                checkboxElement.nextElementSibling.classList.add('text-taxado');
+            }
+        }
     })
     renderTasksProgressData(tasks)
 }
