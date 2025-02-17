@@ -1,6 +1,9 @@
-/*const renderTasksProgressData = (tasks) => {
+const renderTasksProgressData = (tasks) => {
     let tasksProgress;
 
+    /*now = new Date;
+    document.write("Hoje é " + now.getDay() + ", " + now.getDate() + " de " + now.getMonth() + " de " + now.getFullYear());
+*/
 
     const tasksProgressDOM = document.getElementById('tasks-progress');
     if (tasksProgressDOM) tasksProgress = tasksProgressDOM;
@@ -92,9 +95,10 @@ const onCheckboxClick = (event) => {
     renderTasksProgressData(updatedTasks)
 }
 
-const getCheckboxImput = ({id, description, checked}) => {
+const getCheckboxImput = ({id, description, checked, createdAt}) => {
     const checkbox = document.createElement('input');
     const label = document.createElement('label');
+    const dateSpan = document.createElement('span');
     const Wrapper = document.createElement('div');
     const checkboxId = `${id}-checkbox`;
 
@@ -103,7 +107,10 @@ const getCheckboxImput = ({id, description, checked}) => {
     checkbox.checked = checked || false;
     checkbox.addEventListener('change' , onCheckboxClick)
 
+    dateSpan.className = 'task-date';
+    dateSpan.textContent = ` (${createdAt})`;
     label.textContent = description;
+    label.appendChild(dateSpan);
     label.htmlFor = checkboxId;
     Wrapper.className = 'checkbox-label-container';
 
@@ -112,6 +119,7 @@ const getCheckboxImput = ({id, description, checked}) => {
 
     return Wrapper;
 }
+
 
 const getNewTaskId = () => {
     const tasks = getTasksFromLocalStorage()
@@ -122,7 +130,8 @@ const getNewTaskId = () => {
 const getNewTaskData = (event) => {
     const description = event.target.elements.description.value;
     const id = getNewTaskId();
-    return {description, id};
+    const createdAt = new Date().toLocaleString('pt-BR');
+    return {description, id, createdAt};
 }
 
 const getCreatedTaskInfo = (event) => new Promise((resolve) => {
@@ -147,7 +156,12 @@ const createTask = async (event) => {
 
     const updatedTasks = [
         ...tasks,
-        { id: newTaskData.id, description: newTaskData.description, checked: false }
+        { 
+            id: newTaskData.id, 
+            description: newTaskData.description, 
+            checked: false,
+            createdAt: newTaskData.createdAt
+        }
     ]
     setTasksInLocalStorage(updatedTasks)
     renderTasksProgressData(updatedTasks)
@@ -171,70 +185,3 @@ window.onload = function() {
     })
     renderTasksProgressData(tasks)
 }
-
-
-
-// Elementos da interface
-const taskList = document.getElementById("taskList");
-const taskInput = document.getElementById("taskInput");
-const addTaskButton = document.getElementById("addTaskButton");
-const currentDate = document.getElementById("current-date");
-
-// Inicializa a data atual
-function updateCurrentDate() {
-    if (currentDate) {
-        const now = new Date();
-        const days = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
-        const months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
-        currentDate.textContent = `Hoje é ${days[now.getDay()]}, ${now.getDate()} de ${months[now.getMonth()]} de ${now.getFullYear()}`;
-    }
-}
-
-// Atualiza a data ao carregar a página
-updateCurrentDate();
-
-*/
-
-function addTask() {
-    const taskList = document.getElementById("taskList");
-    const taskInput = document.getElementById("taskInput");
-    const taskText = taskInput.value.trim();
-    if (taskText !== "") {
-        const li = document.createElement("li");
-        li.innerHTML = `   
-            <span>${taskText}</span>
-            <button class="editButton" onClick="editTask(this)">Editar</button>
-            <button class="deleteButton" onClick="deleteTask(this)">Excluir</button>
-        `;
-        taskList.appendChild(li);
-        taskInput.value = "";
-        taskInput.focus();
-    }
-}
-
-function editTask(button) {
-    const li = button.parentElement;
-    const span = li.querySelector('span');
-    const newText = prompt("Editar tarefa:", span.textContent);
-    if (newText !== null && newText.trim() !== "") {
-        span.textContent = newText.trim();
-    }
-}
-
-function deleteTask(button) {
-    const li = button.parentElement;
-    li.remove();
-}
-/*
-if (addTaskButton) {
-    addTaskButton.addEventListener('click', addTask);
-}
-
-// Adiciona suporte para pressionar Enter no input
-if (taskInput) {
-    taskInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            addTask();
-        }
-    }); 
-    } */

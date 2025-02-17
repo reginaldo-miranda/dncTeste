@@ -10,10 +10,10 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(#41e5d9, #4d8fe2);
-   /* margin: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
 }
 
 h1 {
@@ -181,4 +181,3 @@ footer {
         cursor: pointer;
     }
 }
-
