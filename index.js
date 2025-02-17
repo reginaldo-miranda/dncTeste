@@ -173,7 +173,7 @@ const createTask = async (event) => {
 window.onload = function() {
     const form = document.getElementById('create-todo-form');
     form.addEventListener('submit', createTask);
-
+ 
     const tasks = getTasksFromLocalStorage();
 
     tasks.forEach((task) => {
