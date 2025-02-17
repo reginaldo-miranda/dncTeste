@@ -1,9 +1,6 @@
 const renderTasksProgressData = (tasks) => {
     let tasksProgress;
 
-    /*now = new Date;
-    document.write("Hoje é " + now.getDay() + ", " + now.getDate() + " de " + now.getMonth() + " de " + now.getFullYear());
-*/
 
     const tasksProgressDOM = document.getElementById('tasks-progress');
     if (tasksProgressDOM) tasksProgress = tasksProgressDOM;
@@ -58,6 +55,9 @@ const createTaskListItem = (task, checkbox) => {
     const list = document.getElementById('todo-list');
     const toDo = document.createElement('li');
 
+    const buttonContainer = document.createElement("div");
+    buttonContainer.className = 'button-container';
+
     const editTaskButton = document.createElement("button");
     editTaskButton.textContent = 'Editar';
     editTaskButton.className = 'edit-task-btn';
@@ -70,10 +70,12 @@ const createTaskListItem = (task, checkbox) => {
     removeTaskButton.ariaLabel = 'Remover tarefa';
     removeTaskButton.onclick = () => removeTask(task.id);
 
+    buttonContainer.appendChild(editTaskButton);
+    buttonContainer.appendChild(removeTaskButton);
+
     toDo.id = task.id;
     toDo.appendChild(checkbox);
-    toDo.appendChild(editTaskButton);
-    toDo.appendChild(removeTaskButton);
+    toDo.appendChild(buttonContainer);
    
     list.appendChild(toDo);
 
