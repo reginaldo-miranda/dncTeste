@@ -23,16 +23,27 @@ const getTasksFromLocalStorage = () => {
 const setTasksInLocalStorage = (tasks) => {
     window.localStorage.setItem('tasks', JSON.stringify(tasks));
 }
-const removeTask = (taskId) => {
+const markTaskAsDone = (taskId) => {
     const tasks = getTasksFromLocalStorage();
-    const updatedTasks = tasks.filter(({id}) => parseInt(id) !== parseInt(taskId));
-    setTasksInLocalStorage(updatedTasks)
-    renderTasksProgressData(updatedTasks)
+    const updatedTasks = tasks.map(task => 
+        parseInt(task.id) === parseInt(taskId) 
+            ? { ...task, done: true }
+            : task
+    );
+    setTasksInLocalStorage(updatedTasks);
+    renderTasksProgressData(updatedTasks);
 
-    document
-    .getElementById("todo-list")
-    .removeChild(document.getElementById(taskId));
+    const taskElement = document.getElementById(taskId);
+    if (taskElement) {
+        const button = taskElement.querySelector('.remove-task-btn');
+        if (button) {
+            button.classList.add('concluido');
+            button.textContent = '';
+        }
+        taskElement.classList.add('task-concluida', 'transicao-suave');
+    }
 }
+
 
 const removeDoneTasks = () => {
     const tasks = getTasksFromLocalStorage();
@@ -64,11 +75,12 @@ const createTaskListItem = (task, checkbox) => {
     editTaskButton.ariaLabel = 'Editar tarefa';
     editTaskButton.onclick = () => handleEditTask(task.id);
 
-    const removeTaskButton = document.createElement("button");
-    removeTaskButton.textContent = 'Concluir'; 
-    removeTaskButton.className = 'remove-task-btn';
-    removeTaskButton.ariaLabel = 'Remover tarefa';
-    removeTaskButton.onclick = () => removeTask(task.id);
+const removeTaskButton = document.createElement("button");
+removeTaskButton.textContent = 'Concluir'; 
+removeTaskButton.className = 'remove-task-btn';
+removeTaskButton.ariaLabel = 'Concluir tarefa';
+removeTaskButton.onclick = () => markTaskAsDone(task.id);
+
 
     buttonContainer.appendChild(editTaskButton);
     buttonContainer.appendChild(removeTaskButton);

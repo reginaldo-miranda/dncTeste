@@ -3,7 +3,7 @@ html {
     height: 100%;
     box-sizing: border-box;
     font-size: 10px;
-    font-family: sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 body {
@@ -102,10 +102,33 @@ main {
         background-color: #45a049;
     }
 
-    .remove-task-btn {
-        background-color: #0d58e3;
-    }
+.remove-task-btn {
+    background-color: #0d58e3;
+    position: relative;
+}
 
+.remove-task-btn.concluido {
+    background-color: #4CAF50;
+}
+
+.remove-task-btn.concluido::after {
+    content: "✓";
+    color: white;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.task-concluida {
+    background-color: #e8f5e9;
+    border-color: #4CAF50;
+}
+
+.transicao-suave {
+    transition: all 0.3s ease;
+}
 
 .editable-task {
     border: 1px solid #ccc;
@@ -140,9 +163,6 @@ main {
     width: fit-content;
 }
 
-
-
-
 .checkbox-label-container > input {
     margin-right: 0.8rem;
     cursor: pointer;
@@ -164,8 +184,6 @@ main {
     outline: 0;
     border: 1px solid #646464;
     padding: .8rem;
-
-   
 }
 
 .add-task-btn {
@@ -205,7 +223,7 @@ footer {
     font-size: 1.6rem;
     align-items: center;
 }
-/* -------------------------------------------*/
+
 @media screen and (max-width: 680px) {
     footer {
         flex-direction: column;
@@ -216,7 +234,6 @@ footer {
 
     #create-todo-section{
         width: 100%;
-      /* background: #0d58e3;*/
     }
     
     .remove-done-tasks-btn {
@@ -246,11 +263,9 @@ footer {
         cursor: pointer;
     }
 
-
     .input-description {
         width: 100%;
         margin-bottom: .4rem;
-      
     }
 
     .todo-list-section > ul > li {
@@ -259,7 +274,6 @@ footer {
         align-items: flex-start;
     }
 
-    
     .button-container {
         display: flex;
         justify-content: center;
