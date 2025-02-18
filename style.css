@@ -71,7 +71,7 @@ main {
 }
 
 #save-task{
-    width: 2.5rem;
+    width: 8rem;
 }
 
 .button-container {
@@ -149,13 +149,14 @@ main {
     margin-right: .4rem;
     outline: 0;
     border: 1px solid #646464;
-    padding: .8rem;
+    padding: .8rem;`
+   
 }
 
 .add-task-btn {
     box-sizing: border-box; 
     height: 3.9rem;
-    width: 1.2rem; 
+    width: 5.2rem; 
     color: #fff;
     background: #8f49e7;
     border: none;
@@ -197,6 +198,11 @@ footer {
         background-color:  #a1f5f0;
         border-radius: .8rem;
     }
+
+    #create-todo-section{
+        width: 100%;
+      /* background: #0d58e3;*/
+    }
     
     .remove-done-tasks-btn {
         margin: 1rem auto;
@@ -211,6 +217,10 @@ footer {
         align-items: center;      
     }   
 
+    #save-task{
+        width: 100%;
+    }
+
     .add-task-btn {
         width: 100%;
         color: #fff;
@@ -221,8 +231,11 @@ footer {
         cursor: pointer;
     }
 
+
     .input-description {
-        margin-bottom: .8rem;
+        width: 100%;
+        margin-bottom: .4rem;
+      
     }
 
     .todo-list-section > ul > li {
