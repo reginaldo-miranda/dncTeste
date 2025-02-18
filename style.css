@@ -129,6 +129,20 @@ main {
     text-decoration: line-through;
 }
 
+.task-etiqueta {
+    background-color: #f0f0f0;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    font-size: 1.4rem;
+    color: #333;
+    display: block;
+    margin-top: 0.3rem;
+    width: fit-content;
+}
+
+
+
+
 .checkbox-label-container > input {
     margin-right: 0.8rem;
     cursor: pointer;
@@ -149,7 +163,8 @@ main {
     margin-right: .4rem;
     outline: 0;
     border: 1px solid #646464;
-    padding: .8rem;`
+    padding: .8rem;
+
    
 }
 
@@ -241,7 +256,9 @@ footer {
     .todo-list-section > ul > li {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
     }
+
     
     .button-container {
         display: flex;

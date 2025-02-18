@@ -75,12 +75,22 @@ const createTaskListItem = (task, checkbox) => {
 
     toDo.id = task.id;
     toDo.appendChild(checkbox);
+    
+    // Adiciona a etiqueta à tarefa
+    if (task.etiqueta) {
+        const etiquetaElement = document.createElement('span');
+        etiquetaElement.className = 'task-etiqueta';
+        etiquetaElement.textContent = task.etiqueta;
+        toDo.appendChild(etiquetaElement);
+    }
+    
     toDo.appendChild(buttonContainer);
    
     list.appendChild(toDo);
 
     return toDo;
 }
+
 
 const handleEditTask = (taskId) => {
     const taskElement = document.getElementById(taskId);
@@ -168,8 +178,13 @@ const getCheckboxImput = ({id, description, checked, createdAt}) => {
 
     Wrapper.appendChild(checkbox);
     Wrapper.appendChild(label);
+    
+    // Nova tag etiqueta inserida aqui
+    const etiqueta = document.createElement('etiqueta');
+    Wrapper.appendChild(etiqueta);
 
     return Wrapper;
+
 }
 
 
@@ -181,10 +196,12 @@ const getNewTaskId = () => {
 
 const getNewTaskData = (event) => {
     const description = event.target.elements.description.value;
+    const etiqueta = event.target.elements.etiqueta.value;
     const id = getNewTaskId();
     const createdAt = new Date().toLocaleString('pt-BR');
-    return {description, id, createdAt};
+    return {description, etiqueta, id, createdAt};
 }
+
 
 const getCreatedTaskInfo = (event) => new Promise((resolve) => {
     setTimeout(() => {
@@ -206,15 +223,17 @@ const createTask = async (event) => {
 
     const tasks = getTasksFromLocalStorage();
 
-    const updatedTasks = [
-        ...tasks,
-        { 
-            id: newTaskData.id, 
-            description: newTaskData.description, 
-            checked: false,
-            createdAt: newTaskData.createdAt
-        }
-    ]
+        const updatedTasks = [
+            ...tasks,
+            { 
+                id: newTaskData.id, 
+                description: newTaskData.description,
+                etiqueta: newTaskData.etiqueta,
+                checked: false,
+                createdAt: newTaskData.createdAt
+            }
+        ]
+
     setTasksInLocalStorage(updatedTasks)
     renderTasksProgressData(updatedTasks)
 
